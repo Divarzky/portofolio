@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .jumbotron {
+            background-image: url('background.jpg');
+            background-size: cover;
+            color: #8eacdf;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+        h3 {
+            text-align: center;
+        }
+
+        .portfolio-item {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover::before {
+    opacity: 1;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portofolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofolio.html">Biodata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container mb-4">
+            <h1 class="display-4 ">Selamat datang di Portofolio!</h1>
+            <p class="lead">Ini adalah tempat saya memajang projek projek saya.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Projek Kotaklogin</h3>
+                <a href="Kotaklogin/formlogin.html" target="_blank">
+                    <div class="portfolio-item">
+                        <img src="Asset icon/ftformlog.png" alt="Project 1">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <h3>Kalkulator Jarak dan Waktu</h3>
+                <a href="Kalkulator/home.html" target="_blank">
+                    <div class="portfolio-item">
+                        <img src="Asset icon/ftkalwaja.png" alt="Project 2">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <h3>Kalkulator Sederhana</h3>
+                <a href="Kotaklogin/Artikel.html" target="_blank">
+                    <div class="portfolio-item">
+                        <img src="Asset icon/ftklku.png" alt="Project 3">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

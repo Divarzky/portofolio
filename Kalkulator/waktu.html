@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="waktu.css">
+    <title>Kalkulator Waktu Tempuh</title>
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>Kalkulator Waktu Tempuh</h1>
+        <table>
+        <label for="jarak">Jarak perjalanan (km): </label><br>
+        <input type="number" id="jarak" placeholder="Masukkan jarak" required><br>
+
+        <label for="kecepatan">Kecepatan rata-rata (km/jam): </label><br>
+        <input type="number" id="kecepatan" placeholder="Masukkan kecepatan" required><br>
+        </table>
+        
+        <button onclick="hitungWaktuTempuh()">Hitung Waktu Tempuh</button>
+        <br><br>
+        <a href="home.html" class="klik"><button>Kembali</button></a>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        function hitungWaktuTempuh() {
+    var jarak = parseFloat(document.getElementById('jarak').value);
+    var kecepatan = parseFloat(document.getElementById('kecepatan').value);
+
+    var waktuTempuh = jarak / kecepatan;
+
+    document.getElementById('hasil').innerHTML = "Waktu tempuh: " + waktuTempuh.toFixed(2) + " jam";
+}
+    </script>
+</html>
